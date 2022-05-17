@@ -1,0 +1,20 @@
+go to http://192.168.56.101/robots.txt
+
+we can see 2 folders :
+/whatever
+/.hidden
+
+we will start with /whatever :
+go to http://192.168.56.101/whatever/
+there's one file :
+http://192.168.56.101/whatever/htpasswd
+
+In it there's an id "root" and a hash
+We decrypt the hash with https://hashes.com/en/tools/hash_identifier
+Turns out that it's an MD5 hash, and it's value is "dragon"
+
+Now we can try to login :
+go to http://192.168.56.101/admin
+login with id "root" and password "dragon"
+
+Done!
