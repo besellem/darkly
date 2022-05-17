@@ -1,0 +1,3 @@
+We just run the python script to retrieve all the READMEs recursively.
+
+Done!
