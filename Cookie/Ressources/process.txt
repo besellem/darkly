@@ -1,0 +1,8 @@
+go to http://192.168.56.101/
+There's a cookie named "i_am_admin"
+Its value is a hash which, when decoded, is "false".
+We encrypt "true" and change the cookie value to the hash produced (b326b5062b2f0e69046810717534cb09)
+
+Reload the page
+
+Done!

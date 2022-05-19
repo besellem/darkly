@@ -1,3 +1,5 @@
-We just run the python script to retrieve all the READMEs recursively.
+There's a .hidden folder found in the root of the project thanks to robots.txt.
+There's a bunch of folders and files in it, so I wrote a script which retrieve all the files and search for a flag.
+Just run the python script to retrieve all the READMEs recursively.
 
 Done!
