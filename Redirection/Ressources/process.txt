@@ -1,0 +1,7 @@
+# We can see that there's some redirection involved in some links.
+# "/index.php?page=redirect&site=facebook" for example 
+
+# We get the flag when we try to change the url :
+http://192.168.56.101/index.php?page=redirect&site=
+
+Done !
