@@ -1,0 +1,13 @@
+# I tried to change the <option> values trying some other values and it worked with values > 10.
+
+Just change this line for example:
+
+<option value="2">2</option>
+
+To:
+
+<option value="11">2</option>
+
+And then select 2 in the dropdown.
+
+Done !
