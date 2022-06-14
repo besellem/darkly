@@ -1,0 +1,12 @@
+# Here I first tried some SQL injections but everything seemed to work fine.
+# i then tried some XSS attacks.
+
+on the "Message" input I tryed:
+<script>hello</script>
+
+and it was only showing "hello" as a result.
+I then tried some special characters on the "name" input until it worked
+
+Try "<" or ">"; it's displaying the flag
+
+Done !
