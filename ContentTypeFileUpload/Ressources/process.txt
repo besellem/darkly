@@ -1,0 +1,6 @@
+# The content type uploads jpeg images to the server.
+# It prevents uploading other files. So when we try to upload a .php file,
+# it fails.
+
+# To solve this, we need to change the content type in the request:
+Content-Type: image/jpeg

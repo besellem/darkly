@@ -1,0 +1,6 @@
+# Reference
+https://blog.clever-age.com/fr/2014/10/21/owasp-local-remote-file-inclusion-lfi-rfi/
+
+# We just tried to pass some random files to "/?page=", getting some alerts.
+# We then tried to access "/?page=../../../../../../../etc/shadow"
+# We then tried to access "/?page=../../../../../../../etc/passwd" and it worked
