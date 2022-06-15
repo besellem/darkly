@@ -4,9 +4,3 @@ there's a form with a text field and a submit button
 there's a hidden field with the value of the email
 we just change the email address from "webmaster@borntosec.com" to anything else
 click on submit
-
-Here's the flag
-
-the flag is a SHA256 hash decrypted into "recoverthis", don't know how if it's important 
-
-Done!
